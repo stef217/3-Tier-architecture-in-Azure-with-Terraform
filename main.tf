@@ -32,7 +32,7 @@ resource "azurerm_linux_virtual_machine" "frontend" {
   }
 
   computer_name  = "frontendvm"
- # custom_data = filebase64("frontend-init.sh")
+  custom_data = filebase64("frontend-init.sh")
 }
 
 resource "azurerm_linux_virtual_machine" "backend" {
@@ -63,7 +63,7 @@ resource "azurerm_linux_virtual_machine" "backend" {
   }
   
   computer_name  = "backendvm"
- # custom_data = filebase64("backend-init.sh")
+  custom_data = filebase64("backend-init.sh")
 }
 
 resource "azurerm_linux_virtual_machine" "DB" {
@@ -94,5 +94,5 @@ resource "azurerm_linux_virtual_machine" "DB" {
   }
   
   computer_name  = "DBvm"
- # custom_data = filebase64("DB-init.sh")
+  custom_data = filebase64("database-init.sh")
 }
